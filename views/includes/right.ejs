@@ -1,0 +1,139 @@
+<div class="lateral">
+
+    <div id="fixer">
+
+        <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+        <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus" style="margin: 5px auto 15px auto; text-align: center;"></div>
+
+        <div class="categorias">
+            <ul class="scrolling cat">
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/биография">
+                        Биография
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/боевик">
+                        Боевики
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/вестерн">
+                        Вестерны
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/военный">
+                        Военные
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/детектив">
+                        Детективы
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/документальный">
+                        Документальные
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/драма">
+                        Драма
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/история">
+                        Исторические
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/комедия">
+                        Комедии
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/криминал">
+                        Криминал
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/мелодрама">
+                        Мелодрамы
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/приключения">
+                        Приключения
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/семейный">
+                        Семейные
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/спорт">
+                        Спортивные
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/триллер">
+                        Триллеры
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/ужасы">
+                        Ужасы
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/фантастика">
+                        Фантастика
+                    </a>
+                </li>
+                <li class="cat-item">
+                    <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>/фэнтези">
+                        Фэнтези
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="filtro_y">
+            <ul class="scrolling">
+
+                <% for (var i = 2016; i >= 1900; i--) { %>
+
+                <li>
+                    <a class="ito" href="<%- page.protocol %><%- page.domain %>/<%- page.urls.year %>/<%- i %>"><%- i %></a>
+                </li>
+
+                <% } %>
+
+            </ul>
+        </div>
+
+        <% if (typeof soon == 'object' && soon.movies.length) { %>
+
+        <div class="categorias">
+            <h3><%- soon.name %> <span class="icon-sort"></span></h3>
+            <ul class="scrolling cat">
+
+                <% soon.movies.forEach(function (movie) { %>
+
+                <li class="cat-item">
+                    <a href="<%- movie.url %>" title="<%- movie.title_ru %>">
+                        <%- movie.title_ru %>
+                    </a>
+                </li>
+
+                <% }); %>
+
+            </ul>
+        </div>
+
+        <% } %>
+
+    </div>
+</div>

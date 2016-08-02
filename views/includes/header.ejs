@@ -1,0 +1,101 @@
+<div class="rheader">
+    <div class="box">
+        <div class="left">
+            <a href="#bars" class="rclic"><b class="icon-bars"></b></a>
+        </div>
+        <div class="rmenus">
+            <div>
+                <ul>
+                    <li class="page_item">
+                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.year %>">Все годы</a>
+                    </li>
+                    <li class="page_item">
+                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>">Все жанры</a>
+                    </li>
+                    <li class="page_item">
+                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.country %>">Все страны</a>
+                    </li>
+                    <li class="page_item">
+                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.actor %>">Все актеры</a>
+                    </li>
+                    <li class="page_item">
+                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.director %>">Все режиссеры</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <a class="rclic2"><b class="icon-search"></b></a>
+        </div>
+        <div class="rbuscar">
+            <form method="get" action="<%- page.protocol %><%- page.domain %>/<%- page.urls.search %>/title">
+                <div class="textar">
+                    <input class="buscar" type="text" placeholder="Поиск ..." name="q" value="">
+                </div>
+            </form>
+        </div>
+        <div class="center">
+            <a href="<%- page.protocol %><%- page.domain %>">
+                <img src="/themes/cersei/public/images/logo.png" alt="Логотип"/>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="header">
+    <div class="top">
+        <div class="menu">
+            <ul id="menu-header-menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
+                    <a href="<%- page.protocol %><%- page.domain %>">Смотреть фильмы онлайн</a>
+                </li>
+            </ul>
+            <% if (page.social) { %>
+            <div class="social">
+                <b>Следите за Нами:</b>
+                <% if (page.social.vk) { %>
+                <a href="<%- page.social.vk %>" target="_blank">ВК</a>
+                <% } %>
+                <% if (page.social.facebook) { %>
+                <a href="<%- page.social.facebook %>" target="_blank">Facebook</a>
+                <% } %>
+                <% if (page.social.twitter) { %>
+                <a href="<%- page.social.twitter %>" target="_blank">Twitter</a>
+                <% } %>
+                <% if (page.social.gplus) { %>
+                <a href="<%- page.social.gplus %>" target="_blank">Google+</a>
+                <% } %>
+            </div>
+            <% } %>
+        </div>
+    </div>
+    <div id="cabeza" class="navegador">
+        <div class="caja">
+            <div class="logo">
+                <A href="<%- page.protocol %><%- page.domain %>">
+                    <img src="/themes/cersei/public/images/logo.png" alt="Логотип"/>
+                </a>
+            </div>
+            <div class="menu">
+                <div>
+                    <ul>
+                        <li class="page_item">
+                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.year %>">Все годы</a>
+                        </li>
+                        <li class="page_item">
+                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>">Все жанры</a>
+                        </li>
+                        <li class="page_item">
+                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.country %>">Все страны</a>
+                        </li>
+                        <li class="page_item">
+                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.actor %>">Все актеры</a>
+                        </li>
+                        <li class="page_item">
+                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.director %>">Все режиссеры</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

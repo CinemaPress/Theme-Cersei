@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+    <% include includes/head.ejs %>
+
+</head>
+<body>
+<div class="kapla">
+
+    <% include includes/header.ejs %>
+
+    <div id="contenedor">
+        <div class="contenido">
+            <div class="box">
+                <div class="header">
+                    <div>
+                        <ul>
+                            <li class="page_item">
+                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.movie %>">Фильмы</a>
+                            </li>
+                            <li class="page_item">
+                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.serial %>">Сериалы</a>
+                            </li>
+                            <li class="page_item">
+                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.mult %>">Мультфильмы</a>
+                            </li>
+                            <li class="page_item">
+                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.anime %>">Аниме</a>
+                            </li>
+                            <li class="page_item">
+                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.tv %>">Передачи</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="buscador">
+                        <form method="get" action="<%- page.protocol %><%- page.domain %>/<%- page.urls.search %>/title">
+                            <div class="imputo">
+                                <input class="buscar" type="text" placeholder="Поиск ..." name="q">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="box_item">
+
+                    <% if (typeof slider == 'object' && slider.movies.length) { %>
+
+                    <div class="slider_box s_home">
+                        <div class="head_slider">
+                            <div class="controles">
+                                <a class="prev btn"><b class="icon-angle-left"></b></a>
+                                <a class="play btn"><b class="icon-playback-play"></b></a>
+                                <a class="next btn"><b class="icon-angle-right"></b></a>
+                            </div>
+                        </div>
+                        <div class="owl-carousel owl-theme slider1">
+
+                            <% slider.movies.forEach(function (movie) { %>
+
+                            <div class="item">
+                                <div class="imagens">
+                                    <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movie.title_ru %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
+                                    <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
+                                </div>
+                                <span class="ttps"><%- movie.title_ru %> (<%- movie.year %>) полный фильм онлайн</span>
+                                <span class="ytps"><%- movie.year %></span>
+                            </div>
+
+                            <% }); %>
+
+                        </div>
+                    </div>
+
+                    <% } %>
+
+                    <div class="peliculas">
+                        <div id="revel" class="skl">
+                            <div class="a">
+                                <% if (page.social) { %>
+                                <% if (page.social.vk) { %>
+                                <a class="roce" href="<%- page.social.vk %>" target="_blank">
+                                    <b class="icon-vk"></b>
+                                </a>
+                                <% } %>
+                                <% if (page.social.facebook) { %>
+                                <a class="roce" href="<%- page.social.facebook %>" target="_blank">
+                                    <b class="icon-facebook"></b>
+                                </a>
+                                <% } %>
+                                <% if (page.social.twitter) { %>
+                                <a class="roce" href="<%- page.social.twitter %>" target="_blank">
+                                    <b class="icon-twitter"></b>
+                                </a>
+                                <% } %>
+                                <% if (page.social.gplus) { %>
+                                <a class="roce" href="<%- page.social.gplus %>" target="_blank">
+                                    <b class="icon-google-plus"></b>
+                                </a>
+                                <% } %>
+                                <% } %>
+                                <div class="menus">
+                                    <div>
+                                        <ul>
+                                            <li class="page_item">
+                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.movie %>">Фильмы</a>
+                                            </li>
+                                            <li class="page_item">
+                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.serial %>">Сериалы</a>
+                                            </li>
+                                            <li class="page_item">
+                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.mult %>">Мультфильмы</a>
+                                            </li>
+                                            <li class="page_item">
+                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.anime %>">Аниме</a>
+                                            </li>
+                                            <li class="page_item">
+                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.tv %>">Передачи</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="b">
+                                <form method="get" action="<%- page.protocol %><%- page.domain %>/<%- page.urls.search %>/title">
+                                    <div class="boxs">
+                                        <input type="text" placeholder="Поиск ..." value="" name="q">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div style="clear: both;"></div>
+
+                        <h1><%- page.title %></h1>
+
+                        <div style="clear: both;"></div>
+
+                        <% if (typeof categories == 'object' && categories.length) { %>
+
+                        <% categories.forEach(function (category) { %>
+
+                        <div class="items">
+                            <div class="item">
+                                <a href="<%- category.url %>">
+                                    <div class="image" style="padding-top: 0; background: #000 url('<% if (category.image) { %><%- category.image %><% } else { %>https://st.kp.yandex.net/images/kadr/sm_2136182.jpg<% } %>') center no-repeat; height: 100px;">
+                                        <span class="player" style="height: 100px;"></span>
+                                    </div>
+                                    <div class="fixyear">
+                                        <h3><%- category.name %></h3>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <% }); %>
+
+                        <% } %>
+
+                        <div style="clear: both;"></div>
+
+                    </div>
+
+                    <% include includes/right.ejs %>
+
+                </div>
+            </div>
+
+            <% include includes/footer.ejs %>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
