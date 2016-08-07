@@ -21,6 +21,9 @@
                     <li class="page_item">
                         <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.director %>">Все режиссеры</a>
                     </li>
+                    <li class="page_item continueViewingBlock" style="display: none">
+                        <a href="#continueViewingMovie" id="continueViewing">На чем остановились?</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -74,6 +77,15 @@
                 <A href="<%- page.protocol %><%- page.domain %>">
                     <img src="/themes/cersei/public/images/logo.png" alt="Логотип"/>
                 </a>
+            </div>
+            <div style="margin: auto auto auto 5px; display: none;" class="menu continueViewingBlock">
+                <div>
+                    <ul>
+                        <li class="page_item">
+                            <a href="#continueViewingMovie" id="continueViewing">На чем остановились?</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div class="menu">
                 <div>
