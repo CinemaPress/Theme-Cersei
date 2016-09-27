@@ -1,7 +1,10 @@
 # Theme Cersei
-:art: Шаблон «Cersei» для CinemaPress ACMS
 
 ![Шаблон «Cersei» для CinemaPress ACMS](https://raw.githubusercontent.com/CinemaPress/Theme-Cersei/master/screenshot.png "Шаблон «Cersei» для CinemaPress ACMS")
+
+:art: Шаблон «Cersei» для CinemaPress ACMS
+
+- <a href="http://Cersei.CinemaPress.org/" target="_blank">Cersei.CinemaPress.org</a>
 
 ## Установка
 1. [Скачать архив](https://github.com/CinemaPress/Theme-Cersei/archive/master.zip)
