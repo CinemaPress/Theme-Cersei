@@ -12,35 +12,11 @@
 
     <div id="contenedor">
         <div class="contenido">
+
             <div class="box">
-                <div class="header">
-                    <div>
-                        <ul>
-                            <li class="page_item">
-                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.movie %>">Фильмы</a>
-                            </li>
-                            <li class="page_item">
-                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.serial %>">Сериалы</a>
-                            </li>
-                            <li class="page_item">
-                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.mult %>">Мультфильмы</a>
-                            </li>
-                            <li class="page_item">
-                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.anime %>">Аниме</a>
-                            </li>
-                            <li class="page_item">
-                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.tv %>">Передачи</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="buscador">
-                        <form method="get" action="<%- page.protocol %><%- page.domain %>/<%- page.urls.search %>/title">
-                            <div class="imputo">
-                                <input class="buscar" type="text" placeholder="Поиск ..." name="q">
-                            </div>
-                        </form>
-                    </div>
-                </div>
+
+                <% include includes/header2.ejs %>
+
                 <div class="box_item">
 
                     <% if (typeof slider == 'object' && slider.movies.length) { %>
@@ -62,7 +38,7 @@
                                     <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movie.title_ru %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
                                     <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
                                 </div>
-                                <span class="ttps"><%- movie.title_ru %> (<%- movie.year %>) полный фильм онлайн</span>
+                                <span class="ttps"><%- movie.title_ru %> (<%- movie.year %>)</span>
                                 <span class="ytps"><%- movie.year %></span>
                             </div>
 

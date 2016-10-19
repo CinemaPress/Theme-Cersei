@@ -14,6 +14,9 @@
         <div class="contenido">
 
             <div class="box">
+
+                <% include includes/header2.ejs %>
+
                 <div class="box_item">
 
                     <% if (typeof slider == 'object' && slider.movies.length) { %>
@@ -35,7 +38,7 @@
                                     <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movie.title_ru %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
                                     <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
                                 </div>
-                                <span class="ttps"><%- movie.title_ru %> (<%- movie.year %>) полный фильм скачать</span>
+                                <span class="ttps"><%- movie.title_ru %> (<%- movie.year %>)</span>
                                 <span class="ytps"><%- movie.year %></span>
                             </div>
 
@@ -147,6 +150,13 @@
                                         </p>
                                     </div>
 
+                                </div>
+
+                                <div class="sbox episodesListBlock" style="display: none;">
+                                    <div class="entry-content">
+                                        <h3><%- movie.title %> новые серии</h3>
+                                        <div id="episodesList" data-id="<%- movie.kp_id %>"></div>
+                                    </div>
                                 </div>
 
                                 <% if (page.comments) { %>
