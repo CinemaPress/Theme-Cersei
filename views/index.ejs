@@ -137,14 +137,9 @@
                                     </div>
                                 </a>
                                 <div class="fixyear">
-                                    <h3><%- movie.title_ru %> смотреть онлайн</h3>
+                                    <h3><%- movie.title_ru %> (<% if (movie.season && movie.episode) { %><%- movie.season %> сезон <%- movie.episode %> серия <% if (movie.translate) { %><%- movie.translate %><% } %><% } else { %><%- movie.year %><% } %>)</h3>
                                     <span class="year">
-                                        <% if (movie.season && movie.episode) { %>
-                                        <%- movie.season %> сезон <%- movie.episode %> серия
-                                        <% if (movie.translate) { %> <%- movie.translate %><% } %>
-                                        <% } else { %>
-                                        <%- movie.year %>
-                                        <% } %>
+                                        <% if (movie.season && movie.episode) { %><%- movie.season %> сезон <%- movie.episode %> серия <% if (movie.translate) { %> <%- movie.translate %><% } %><% } else { %><%- movie.year %><% } %>
                                     </span>
                                 </div>
                                 <span class="calidad2"><%- movie.genre %></span>
