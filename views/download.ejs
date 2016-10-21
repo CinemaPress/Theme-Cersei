@@ -152,6 +152,16 @@
 
                                 </div>
 
+                                <% if (page.seo) { %>
+
+                                <div class="sbox">
+                                    <div class="entry-content">
+                                        <%- page.seo %>
+                                    </div>
+                                </div>
+
+                                <% } %>
+
                                 <div class="sbox episodesListBlock" style="display: none;">
                                     <div class="entry-content">
                                         <h3><%- movie.title %> новые серии</h3>

@@ -107,6 +107,14 @@
 
                         <h1><%- page.title %></h1>
 
+                        <% if (page.seo) { %>
+
+                        <div class="seo">
+                            <%- page.seo %>
+                        </div>
+
+                        <% } %>
+
                         <% if (typeof movies == 'object') { for (var type in movies) { if (movies.hasOwnProperty(type)) { %>
 
                         <% if (movies[type].length) { %>
@@ -129,8 +137,15 @@
                                     </div>
                                 </a>
                                 <div class="fixyear">
-                                    <h3><%- movie.title_ru %> (<%- movie.year %>) смотреть онлайн</h3>
-                                    <span class="year"><%- movie.year %></span>
+                                    <h3><%- movie.title_ru %> смотреть онлайн</h3>
+                                    <span class="year">
+                                        <% if (movie.season && movie.episode) { %>
+                                        <%- movie.season %> сезон <%- movie.episode %> серия
+                                        <% if (movie.translate) { %> <%- movie.translate %><% } %>
+                                        <% } else { %>
+                                        <%- movie.year %>
+                                        <% } %>
+                                    </span>
                                 </div>
                                 <span class="calidad2"><%- movie.genre %></span>
                             </div>

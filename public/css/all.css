@@ -279,7 +279,7 @@ img{width:100%;position:absolute;bottom:0;left:0}.fake_player
 span.titulos{position:absolute;bottom:0;left:0;padding:2%;width:90%;margin:3%;text-align:right;font-size:16px;color:rgba(255,255,255,0.76);text-shadow:0 1px #000;background:rgba(0,0,0,0.71);-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px}.fake_player span.titulos
 i{font-style:normal;font-size:12px;color:rgba(255,255,255,0.47)}.fake_player span.titulos
 b{float:left;font-size:30px;color:#FFF}.fake_player span.titulos b:hover{color:red}.no_play{display:block!important;font-size:17px;color:#8E8E8E}.no_play
-b{font-size:49px;color:#A481B7}.comentarios{float:left;width:94%;padding:2%;margin-right:2%;margin-bottom:5px;background:rgba(171, 171, 171,0.3);webkit-box-shadow:0 1px 2px rgba(0,0,0,0.5);-moz-box-shadow:0 1px 2px rgba(0,0,0,0.5);box-shadow:0 1px 2px rgba(0,0,0,0.5)}.themeform h3.heading,h3.comment-reply-title{font-size:20px;font-weight:300;color:#FFF;margin-bottom:15px}#comments{margin:0}#pinglist-container{display:none}.comment-tabs{border-bottom:2px solid #eee;margin-bottom:20px}.comment-tabs
+b{font-size:49px;color:#A481B7}.comentarios{float:left;width:94%;padding:2%;margin-right:2%;margin-bottom:5px;webkit-box-shadow:0 1px 2px rgba(0,0,0,0.5);-moz-box-shadow:0 1px 2px rgba(0,0,0,0.5);box-shadow:0 1px 2px rgba(0,0,0,0.5)}.themeform h3.heading,h3.comment-reply-title{font-size:20px;font-weight:300;color:#FFF;margin-bottom:15px}#comments{margin:0}#pinglist-container{display:none}.comment-tabs{border-bottom:2px solid #eee;margin-bottom:20px}.comment-tabs
 li{float:left;margin-bottom:-2px}.comment-tabs li
 a{font-weight:600;padding:0 10px 10px;display:block;color:#aaa;border-bottom:2px solid #eee}.comment-tabs li a:hover{color:#444;border-color:#ccc}.comment-tabs li
 span{background-color:#eee;padding:0 6px;margin-left:8px;-webkit-border-radius:4px;border-radius:4px}.comment-tabs li
@@ -389,4 +389,4 @@ span.titulos{width:80%;padding:2% 5%}.comentarios{width:92%;padding:4%}#noticias
 .item{width:100%;margin-left:0}}@media only screen and (max-width: 480px){.items
 .item{width:31%}.limpiar{display:none}#single .s_left .sbox
 .imagen{width:35%}#single .s_left .sbox
-.data{width:62%}}@media only screen and (max-width: 424px){.ads_300{display:block;width:100%;text-align:center}}
+.data{width:62%}}@media only screen and (max-width: 424px){.ads_300{display:block;width:100%;text-align:center}}.seo{border-bottom: 1px solid rgba(0,0,0,0.4);padding: 0 0 10px 0;margin: auto auto 20px auto;}#episodesList a {color: #fff}#episodesList a:hover {color: #999}#episodesList a:visited {color: #666}#disqus_thread p{color:#ccc;}#disqus_thread a{color:#fff;}

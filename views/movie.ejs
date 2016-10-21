@@ -164,6 +164,16 @@
                                     </div>
                                 </div>
 
+                                <% if (page.seo) { %>
+
+                                <div class="sbox">
+                                    <div class="entry-content">
+                                        <%- page.seo %>
+                                    </div>
+                                </div>
+
+                                <% } %>
+
                                 <div class="sbox episodesListBlock" style="display: none;">
                                     <div class="entry-content">
                                         <h3><%- movie.title %> новые серии</h3>
@@ -210,11 +220,12 @@
 
                                                 <div class="item">
                                                     <div class="imagens">
-                                                        <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movies.title_ru %>" style="width: 100%; height: 100%;"/>
+                                                        <a href="<%- movie.url %>">
+                                                            <img src="<%- movie.poster %>" alt="<%- movies.title_ru %>" style="width: 100%; height: 100%;"/>
                                                         </a>
                                                         <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
                                                     </div>
-                                                    <span class="ttps" title="<%- movie.title_ru %> (<%- movie.year %>)"><%- movie.title_ru %> смотреть</span>
+                                                    <span class="ttps" title="<%- movie.title_ru %> (<%- movie.year %>)"><%- movie.title_ru %></span>
                                                     <span class="ytps"><%- movie.year %></span>
                                                 </div>
 
