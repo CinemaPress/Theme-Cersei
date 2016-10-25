@@ -152,19 +152,19 @@
 
                         <div style="clear: both;"></div>
 
-                        <div class="sorting">
+                        <div class="pagination">
 
                             <% page.sorting.forEach(function (sort) { %>
 
                             <% if (sort.active) { %>
 
-                            <a href="<%- sort.url %>">
+                            <a href="<%- sort.url %>" style="padding: 6px 4px;">
                                 <strong style="color: #fff;"><%- sort.name %></strong>
                             </a>
 
                             <% } else { %>
 
-                            <a href="<%- sort.url %>">
+                            <a href="<%- sort.url %>" style="padding: 6px 4px;">
                                 <%- sort.name %>
                             </a>
 
