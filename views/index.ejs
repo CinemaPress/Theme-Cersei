@@ -35,10 +35,10 @@
 
                             <div class="item">
                                 <div class="imagens">
-                                    <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movie.title_ru %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
+                                    <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movie.title %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
                                     <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
                                 </div>
-                                <span class="ttps" title="<%- movie.title_ru %> (<%- movie.year %>)"><%- movie.title_ru %> (<%- movie.year %>)</span>
+                                <span class="ttps" title="<%- movie.title %> (<%- movie.year %>)"><%- movie.title %> (<%- movie.year %>)</span>
                                 <span class="ytps"><%- movie.year %></span>
                             </div>
 
@@ -131,13 +131,13 @@
                             <div class="item">
                                 <a href="<%- movie.url %>">
                                     <div class="image">
-                                        <img src="<%- movie.poster %>" alt="<%- movie.title_ru %> (<%- movie.year %>) полный фильм" style="width: 100%; height: 100%;"/>
+                                        <img src="<%- movie.poster %>" alt="<%- movie.title %> (<%- movie.year %>) полный фильм" style="width: 100%; height: 100%;"/>
                                         <span class="player"></span>
                                         <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
                                     </div>
                                 </a>
                                 <div class="fixyear">
-                                    <h3><%- movie.title_ru %> (<% if (movie.season && movie.episode) { %><%- movie.season %> сезон <%- movie.episode %> серия <% if (movie.translate) { %><%- movie.translate %><% } %><% } else { %><%- movie.year %><% } %>)</h3>
+                                    <h3><%- movie.title %> (<% if (movie.season && movie.episode) { %><%- movie.season %> сезон <%- movie.episode %> серия <% if (movie.translate) { %><%- movie.translate %><% } %><% } else { %><%- movie.year %><% } %>)</h3>
                                     <span class="year">
                                         <% if (movie.season && movie.episode) { %><%- movie.season %> сезон <%- movie.episode %> серия <% if (movie.translate) { %> <%- movie.translate %><% } %><% } else { %><%- movie.year %><% } %>
                                     </span>
