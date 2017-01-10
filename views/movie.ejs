@@ -17,6 +17,12 @@
 
                 <% include includes/header2.ejs %>
 
+                <% if (typeof page.adv == 'object' && page.adv.top) { %>
+                <div style="text-align: center; margin: 10px auto">
+                    <%- page.adv.top %>
+                </div>
+                <% } %>
+
                 <div class="box_item">
 
                     <% if (typeof slider == 'object' && slider.movies.length) { %>
@@ -50,6 +56,12 @@
                     <% } %>
 
                     <div style="clear: both;"></div>
+
+                    <% if (typeof page.adv == 'object' && page.adv.over) { %>
+                    <div style="text-align: center; margin: 10px auto">
+                        <%- page.adv.over %>
+                    </div>
+                    <% } %>
 
                     <div id="player2">
 
@@ -93,6 +105,13 @@
                             </li>
                         </ul>
                     </div>
+
+                    <% if (typeof page.adv == 'object' && page.adv.under) { %>
+                    <div style="text-align: center; margin: 10px auto">
+                        <%- page.adv.under %>
+                    </div>
+                    <% } %>
+
                     <div id="single">
                         <div class="post-ratings">
                             <div class="s_left">
@@ -258,6 +277,12 @@
 
                 </div>
             </div>
+
+            <% if (typeof page.adv == 'object' && page.adv.bottom) { %>
+            <div style="text-align: center; margin: 10px auto">
+                <%- page.adv.bottom %>
+            </div>
+            <% } %>
 
         </div>
     </div>

@@ -135,5 +135,11 @@
 
         <% } %>
 
+        <% if (typeof page.adv == 'object' && page.adv.right) { %>
+        <div style="text-align: center; margin: 10px auto">
+            <%- page.adv.right %>
+        </div>
+        <% } %>
+
     </div>
 </div>
