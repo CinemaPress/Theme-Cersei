@@ -1,5 +1,11 @@
 <div id="footer">
 
+    <% if (typeof page.adv == 'object' && page.adv.bottom) { %>
+    <div style="text-align: center; margin: 10px auto">
+        <%- page.adv.bottom %>
+    </div>
+    <% } %>
+
     <div class="fullstory-drops recentlyViewedBlock" style="margin: 20px 0; display: none;">
         <div>Вы надавно смотрели:</div>
         <div id="recentlyViewed"></div>
