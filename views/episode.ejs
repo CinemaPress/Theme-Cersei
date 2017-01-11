@@ -17,12 +17,6 @@
 
                 <% include includes/header2.ejs %>
 
-                <% if (typeof page.adv == 'object' && page.adv.top) { %>
-                <div style="text-align: center; margin: 10px auto">
-                    <%- page.adv.top %>
-                </div>
-                <% } %>
-
                 <div class="box_item">
 
                     <% if (typeof slider == 'object' && slider.movies.length) { %>
@@ -107,9 +101,11 @@
                     </div>
 
                     <% if (typeof page.adv == 'object' && page.adv.under) { %>
+                    <div style="clear: both;"></div>
                     <div style="text-align: center; margin: 10px auto">
                         <%- page.adv.under %>
                     </div>
+                    <div style="clear: both;"></div>
                     <% } %>
 
                     <div id="single">
