@@ -156,6 +156,30 @@
 
                         <% } } } %>
 
+                        <div style="clear: both;"></div>
+
+                        <div class="pagination">
+
+                            <% if (page.pagination.prev.length) { %>
+                            <% page.pagination.prev.slice(-4).forEach(function (prev) { %>
+                            <a href="<%- prev.link %>" rel="nofollow">
+                                <%- prev.number %>
+                            </a>
+                            <% }); %>
+                            <span class="nav_ext">...</span>
+                            <% } %>
+                            <span><%- page.pagination.current %></span>
+                            <% if (page.pagination.next.length) { %>
+                            <span class="nav_ext">...</span>
+                            <% page.pagination.next.slice(0,4).forEach(function (next) { %>
+                            <a href="<%- next.link %>" rel="nofollow">
+                                <%- next.number %>
+                            </a>
+                            <% }); %>
+                            <% } %>
+
+                        </div>
+
                     </div>
 
                     <% include includes/right.ejs %>
