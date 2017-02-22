@@ -177,6 +177,10 @@
                             </a>
                             <% }); %>
                             <% } %>
+                            <% if (page.pagination.all) { %>
+                            <span class="nav_ext">...</span>
+                            <a href="<%- page.pagination.all.link %>" rel="nofollow"><%- page.pagination.all.number %></a>
+                            <% } %>
 
                         </div>
 
