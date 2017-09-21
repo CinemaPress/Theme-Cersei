@@ -1,6 +1,6 @@
 <div id="footer">
 
-    <% if (typeof page.adv == 'object' && page.adv.bottom) { %>
+    <% if (typeof page.adv === 'object' && page.adv.bottom) { %>
     <div style="clear: both;"></div>
     <div style="text-align: center; margin: 10px auto">
         <%- page.adv.bottom %>
@@ -14,7 +14,7 @@
     </div>
 
     <span class="texto">
-        &copy;&nbsp;2017&nbsp;<a href="https://cinemapress.org" target="_blank">CinemaPress&nbsp;ACMS</a>
+        &copy;&nbsp;<%- new Date().getFullYear() %>&nbsp;<a href="https://cinemapress.org" target="_blank">CinemaPress&nbsp;ACMS</a>
         Email для связи: <%- page.email %>
     </span>
 

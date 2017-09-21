@@ -19,7 +19,7 @@
 
                 <div class="box_item">
 
-                    <% if (typeof slider == 'object' && slider.movies.length) { %>
+                    <% if (typeof slider === 'object' && slider.length) { %>
 
                     <div class="slider_box s_home">
                         <div class="head_slider">
@@ -31,7 +31,7 @@
                         </div>
                         <div class="owl-carousel owl-theme slider1">
 
-                            <% slider.movies.forEach(function (movie) { %>
+                            <% slider.forEach(function (movie) { %>
 
                             <div class="item">
                                 <div class="imagens">
@@ -73,31 +73,41 @@
                                     <b class="icon-google-plus"></b>
                                 </a>
                                 <% } %>
+                                <% if (page.social.youtube) { %>
+                                <a class="roce" href="<%- page.social.youtube %>" target="_blank">
+                                    <b class="icon-youtube4"></b>
+                                </a>
+                                <% } %>
+                                <% if (page.social.instagram) { %>
+                                <a class="roce" href="<%- page.social.instagram %>" target="_blank">
+                                    <b class="icon-profile"></b>
+                                </a>
+                                <% } %>
                                 <% } %>
                                 <div class="menus">
                                     <div>
                                         <ul>
                                             <li class="page_item">
-                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.movie %>">Фильмы</a>
+                                                <a href="/<%- page.urls.type %>/<%- page.urls.types.movie %>">Фильмы</a>
                                             </li>
                                             <li class="page_item">
-                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.serial %>">Сериалы</a>
+                                                <a href="/<%- page.urls.type %>/<%- page.urls.types.serial %>">Сериалы</a>
                                             </li>
                                             <li class="page_item">
-                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.mult %>">Мультфильмы</a>
+                                                <a href="/<%- page.urls.type %>/<%- page.urls.types.mult %>">Мультфильмы</a>
                                             </li>
                                             <li class="page_item">
-                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.anime %>">Аниме</a>
+                                                <a href="/<%- page.urls.type %>/<%- page.urls.types.anime %>">Аниме</a>
                                             </li>
                                             <li class="page_item">
-                                                <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.type %>/<%- page.urls.types.tv %>">Передачи</a>
+                                                <a href="/<%- page.urls.type %>/<%- page.urls.types.tv %>">Передачи</a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
                             <div class="b">
-                                <form method="get" action="<%- page.protocol %><%- page.domain %>/<%- page.urls.search %>/title">
+                                <form method="get" action="/<%- page.urls.search %>/title">
                                     <div class="boxs">
                                         <input type="text" placeholder="Поиск ..." value="" name="q">
                                     </div>
@@ -119,25 +129,21 @@
 
                         <div style="clear: both;"></div>
 
-                        <% if (typeof categories == 'object' && categories.length) { %>
-
-                        <% categories.forEach(function (category) { %>
-
-                        <div class="items">
-                            <div class="item">
-                                <a href="<%- category.url %>">
-                                    <div class="image" style="padding-top: 0; background: #000 url('<% if (category.image) { %><%- category.image %><% } else { %>https://st.kp.yandex.net/images/kadr/sm_2136182.jpg<% } %>') center no-repeat; height: 100px;">
-                                        <span class="player" style="height: 100px;"></span>
-                                    </div>
-                                    <div class="fixyear">
-                                        <h3><%- category.name %></h3>
+                        <% if (typeof categories === 'object' && categories.length) { %>
+                        <div style="clear: both"></div>
+                        <% categories.forEach(function (content) { %>
+                        <div style="float: left; width: 33.33%;">
+                            <div style="margin: 0; padding: 10px">
+                                <a href="<%- content.url %>" class="cinemapress-news">
+                                    <img src="<%- content.image %>" class="cinemapress-news-image" alt="<%- content.title %>" style="height: 160px">
+                                    <div class="cinemapress-news-title">
+                                        <%- content.title %>
                                     </div>
                                 </a>
                             </div>
                         </div>
-
                         <% }); %>
-
+                        <div style="clear: both"></div>
                         <% } %>
 
                         <div style="clear: both;"></div>

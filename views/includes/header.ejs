@@ -7,19 +7,19 @@
             <div>
                 <ul>
                     <li class="page_item">
-                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.year %>">Все годы</a>
+                        <a href="/<%- page.urls.year %>">Все годы</a>
                     </li>
                     <li class="page_item">
-                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>">Все жанры</a>
+                        <a href="/<%- page.urls.genre %>">Все жанры</a>
                     </li>
                     <li class="page_item">
-                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.country %>">Все страны</a>
+                        <a href="/<%- page.urls.country %>">Все страны</a>
                     </li>
                     <li class="page_item">
-                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.actor %>">Все актеры</a>
+                        <a href="/<%- page.urls.actor %>">Все актеры</a>
                     </li>
                     <li class="page_item">
-                        <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.director %>">Все режиссеры</a>
+                        <a href="/<%- page.urls.director %>">Все режиссеры</a>
                     </li>
                 </ul>
             </div>
@@ -28,14 +28,14 @@
             <a class="rclic2"><b class="icon-search"></b></a>
         </div>
         <div class="rbuscar">
-            <form method="get" action="<%- page.protocol %><%- page.domain %>/<%- page.urls.search %>/title">
+            <form method="get" action="/<%- page.urls.search %>/title">
                 <div class="textar">
                     <input class="buscar" type="text" placeholder="Поиск ..." name="q" value="">
                 </div>
             </form>
         </div>
         <div class="center">
-            <a href="<%- page.protocol %><%- page.domain %>">
+            <a href="/">
                 <img src="/themes/cersei/public/images/logo.png" alt="Логотип"/>
             </a>
         </div>
@@ -46,7 +46,7 @@
         <div class="menu">
             <ul id="menu-header-menu">
                 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                    <a href="<%- page.protocol %><%- page.domain %>">Смотреть фильмы онлайн</a>
+                    <a href="/">Смотреть фильмы онлайн</a>
                 </li>
             </ul>
             <% if (page.social) { %>
@@ -64,6 +64,12 @@
                 <% if (page.social.gplus) { %>
                 <a href="<%- page.social.gplus %>" target="_blank">Google+</a>
                 <% } %>
+                <% if (page.social.youtube) { %>
+                <a href="<%- page.social.youtube %>" target="_blank">YouTube</a>
+                <% } %>
+                <% if (page.social.instagram) { %>
+                <a href="<%- page.social.instagram %>" target="_blank">Instagram</a>
+                <% } %>
             </div>
             <% } %>
         </div>
@@ -71,7 +77,7 @@
     <div id="cabeza" class="navegador">
         <div class="caja">
             <div class="logo">
-                <A href="<%- page.protocol %><%- page.domain %>">
+                <A href="/">
                     <img src="/themes/cersei/public/images/logo.png" alt="Логотип"/>
                 </a>
             </div>
@@ -88,19 +94,19 @@
                 <div>
                     <ul>
                         <li class="page_item">
-                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.year %>">Все годы</a>
+                            <a href="/<%- page.urls.year %>">Все годы</a>
                         </li>
                         <li class="page_item">
-                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.genre %>">Все жанры</a>
+                            <a href="/<%- page.urls.genre %>">Все жанры</a>
                         </li>
                         <li class="page_item">
-                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.country %>">Все страны</a>
+                            <a href="/<%- page.urls.country %>">Все страны</a>
                         </li>
                         <li class="page_item">
-                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.actor %>">Все актеры</a>
+                            <a href="/<%- page.urls.actor %>">Все актеры</a>
                         </li>
                         <li class="page_item">
-                            <a href="<%- page.protocol %><%- page.domain %>/<%- page.urls.director %>">Все режиссеры</a>
+                            <a href="/<%- page.urls.director %>">Все режиссеры</a>
                         </li>
                     </ul>
                 </div>

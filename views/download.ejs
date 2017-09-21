@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" prefix="og: http://ogp.me/ns#
+              video: http://ogp.me/ns/video#
+              ya: http://webmaster.yandex.ru/vocabularies/">
 <head>
 
     <% include includes/head.ejs %>
@@ -19,7 +21,7 @@
 
                 <div class="box_item">
 
-                    <% if (typeof slider == 'object' && slider.movies.length) { %>
+                    <% if (typeof slider === 'object' && slider.length) { %>
 
                     <div class="slider_box s_home">
                         <div class="head_slider">
@@ -31,7 +33,7 @@
                         </div>
                         <div class="owl-carousel owl-theme slider1">
 
-                            <% slider.movies.forEach(function (movie) { %>
+                            <% slider.forEach(function (movie) { %>
 
                             <div class="item">
                                 <div class="imagens">
@@ -51,7 +53,7 @@
 
                     <div style="clear: both;"></div>
 
-                    <% if (typeof page.adv == 'object' && page.adv.over) { %>
+                    <% if (typeof page.adv === 'object' && page.adv.over) { %>
                     <div style="clear: both;"></div>
                     <div style="text-align: center; margin: 10px auto">
                         <%- page.adv.over %>
@@ -97,7 +99,7 @@
                         </ul>
                     </div>
 
-                    <% if (typeof page.adv == 'object' && page.adv.under) { %>
+                    <% if (typeof page.adv === 'object' && page.adv.under) { %>
                     <div style="clear: both;"></div>
                     <div style="text-align: center; margin: 10px auto">
                         <%- page.adv.under %>
@@ -111,21 +113,38 @@
                                 <div id="uwee" class="sbox">
                                     <div class="imagen">
                                         <div class="fix">
-                                            <span class="calidad2"><%- movie.genre %></span>
-                                            <img src="<%- movie.poster %>" alt="<%- movie.title %> полный фильм скачать"/>
+                                            <div class="cinemapress-poster">
+                                                <img src="<%- movie.poster %>" alt="<%- movie.title %> (<%- movie.year %>)" title="<%- movie.title %> (<%- movie.year %>)">
+                                                <% if (movie.quality) { %>
+                                                <div class="cinemapress-quality">
+                                                    <span class="cinemapress-svg-quality"></span>
+                                                    <%- movie.quality %>
+                                                </div>
+                                                <% } %>
+                                                <% if (movie.translate) { %>
+                                                <div class="cinemapress-translate">
+                                                    <span class="cinemapress-svg-translate"></span>
+                                                    <%- movie.translate %>
+                                                </div>
+                                                <% } %>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="data">
                                         <h1><%- page.title %></h1>
                                         <span class="titulo_o"><%- movie.title_en %>&nbsp;&nbsp;&nbsp;&nbsp;<%- movie.premiere %></span>
                                         <p class="meta">
-                                    <span>
-                                        <%- movie.year_url %>
-                                    </span>
+                                            <% if (movie.year_url) { %>
+                                            <span>
+                                                <%- movie.year_url %>
+                                            </span>
+                                            <% } %>
                                             &nbsp;
+                                            <% if (movie.genres_url) { %>
                                             <i class="limpiar">
                                                 <%- movie.genres_url %>
                                             </i>
+                                            <% } %>
                                         </p>
                                         <div class="imdb_r">
                                             <div class="a">
@@ -153,30 +172,53 @@
                                         </span>
                                             </div>
                                         </div>
+                                        <% if (movie.directors_url) { %>
                                         <p class="meta_dd">
                                             <b class="icon-megaphone"></b>
                                             <%- movie.directors_url %>
                                         </p>
+                                        <% } %>
+                                        <% if (movie.actors_url) { %>
                                         <p class="meta_dd limpiar">
                                             <b class="icon-male"></b>
                                             <%- movie.actors_url %>
                                         </p>
+                                        <% } %>
+                                        <% if (movie.countries_url) { %>
                                         <p class="meta_dd">
                                             <b class="icon-flag"></b>
                                             <%- movie.countries_url %>
                                         </p>
+                                        <% } %>
                                     </div>
 
                                 </div>
 
-                                <% if (page.seo) { %>
+                                <% if (typeof contents === 'object' && contents.length) { %>
+                                <div style="clear: both"></div>
+                                <div class="sbox">
+                                    <% contents.forEach(function (content) { %>
+                                    <div style="float: left; width: 50%;">
+                                        <div style="margin: 0; padding: 10px">
+                                            <a href="<%- content.url %>" class="cinemapress-news">
+                                                <img src="<%- content.image %>" class="cinemapress-news-image" alt="<%- content.title %>" style="height: 200px">
+                                                <div class="cinemapress-news-title">
+                                                    <%- content.title %>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <% }); %>
+                                </div>
+                                <div style="clear: both"></div>
+                                <% } %>
 
+                                <% if (page.seo) { %>
                                 <div class="sbox">
                                     <div class="entry-content">
                                         <%- page.seo %>
                                     </div>
                                 </div>
-
                                 <% } %>
 
                                 <div class="sbox episodesListBlock" style="display: none;">
@@ -198,7 +240,7 @@
 
                                 <div class="sbox">
                                     <div class="entry-content">
-                                        <% if (typeof movies == 'object') { for (var type in movies) { if (movies.hasOwnProperty(type)) { %>
+                                        <% if (typeof movies === 'object') { for (var type in movies) { if (movies.hasOwnProperty(type)) { %>
 
                                         <% if (movies[type].length) { %>
 
