@@ -18,10 +18,11 @@
             </li>
         </ul>
     </div>
-    <div class="buscador">
+    <div class="buscador" style="padding: 1px 19px 1px 10px;">
         <form method="get" action="/<%- page.urls.search %>/title">
             <div class="imputo">
-                <input class="buscar" type="text" placeholder="Поиск ..." name="q">
+                <input class="buscar" placeholder="Поиск ..." name="q" type="text">
+                <input value="Найти" style="background: none; border: 0; color:#999;cursor: pointer;" type="submit">
             </div>
         </form>
     </div>
