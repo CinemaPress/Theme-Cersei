@@ -20,7 +20,6 @@
                 <div class="box_item">
 
                     <% if (typeof slider === 'object' && slider.length) { %>
-
                     <div class="slider_box s_home">
                         <div class="head_slider">
                             <div class="controles">
@@ -30,9 +29,7 @@
                             </div>
                         </div>
                         <div class="owl-carousel owl-theme slider1">
-
                             <% slider.forEach(function (movie) { %>
-
                             <div class="item">
                                 <div class="imagens">
                                     <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movie.title %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
@@ -41,12 +38,9 @@
                                 <span class="ttps"><%- movie.title %> (<%- movie.year %>)</span>
                                 <span class="ytps"><%- movie.year %></span>
                             </div>
-
                             <% }); %>
-
                         </div>
                     </div>
-
                     <% } %>
 
                     <div style="clear: both;"></div>
@@ -60,9 +54,7 @@
                     <% } %>
 
                     <div id="player2">
-
                         <%- page.player %>
-
                     </div>
 
                     <div style="clear: both;"></div>
@@ -74,26 +66,34 @@
                                     О фильме
                                 </a>
                             </li>
+                            <% if (page.urls.movies.online) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.online %>">
                                     Онлайн
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.download) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.download %>">
                                     Скачать
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.trailer) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.trailer %>">
                                     Трейлер
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.picture) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.picture %>">
                                     Кадры
                                 </a>
                             </li>
+                            <% } %>
                             <li style="float: right; width: 22%; display: none;" class="watchLaterBlock">
                                 <a href="javascript:void(0)" id="watchLater">
                                     Досмотреть позже

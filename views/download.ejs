@@ -60,9 +60,7 @@
                     <% } %>
 
                     <div id="player2">
-
                         <%- page.player %>
-
                     </div>
 
                     <div style="clear: both;"></div>
@@ -74,26 +72,34 @@
                                     О фильме
                                 </a>
                             </li>
+                            <% if (page.urls.movies.online) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.online %>">
                                     Онлайн
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.download) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.download %>" class="selected">
                                     Скачать
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.trailer) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.trailer %>">
                                     Трейлер
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.picture) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.picture %>">
                                     Кадры
                                 </a>
                             </li>
+                            <% } %>
                         </ul>
                     </div>
 
