@@ -130,7 +130,7 @@
                                         </div>
                                     </div>
                                     <div class="data">
-                                        <h1><%- page.title %></h1>
+                                        <h1><%= page.title %></h1>
                                         <span class="titulo_o"><%= movie.title_en %>&nbsp;&nbsp;&nbsp;&nbsp;<%- movie.premiere %></span>
                                         <p class="meta">
                                             <% if (movie.year_url) { %>
@@ -200,9 +200,9 @@
                                     <div style="float: left; width: 50%;">
                                         <div style="margin: 0; padding: 10px">
                                             <a href="<%- content.url %>" class="cinemapress-news">
-                                                <img src="<%- content.image %>" class="cinemapress-news-image" alt="<%- content.title %>" style="height: 200px">
+                                                <img src="<%- content.image %>" class="cinemapress-news-image" alt="<%= content.title %>" style="height: 200px">
                                                 <div class="cinemapress-news-title">
-                                                    <%- content.title %>
+                                                    <%= content.title %>
                                                 </div>
                                             </a>
                                         </div>
