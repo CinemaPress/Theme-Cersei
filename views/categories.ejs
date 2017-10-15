@@ -35,10 +35,10 @@
 
                             <div class="item">
                                 <div class="imagens">
-                                    <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movie.title %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
+                                    <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%= movie.title %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
                                     <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
                                 </div>
-                                <span class="ttps"><%- movie.title %> (<%- movie.year %>)</span>
+                                <span class="ttps"><%= movie.title %> (<%- movie.year %>)</span>
                                 <span class="ytps"><%- movie.year %></span>
                             </div>
 
