@@ -54,8 +54,7 @@
         <% news.forEach(function (content) { %>
         <div>
             <div style="margin: 0; padding: 10px 0">
-                <a href="<%- content.url %>" class="cinemapress-news">
-                    <img src="<%- content.image %>" class="cinemapress-news-image" alt="<%= content.title %>" style="height: 160px">
+                <a href="<%- content.url %>" class="cinemapress-news" style="background:url(<%- content.image %>);">
                     <div class="cinemapress-news-title">
                         <%= content.title %>
                     </div>
