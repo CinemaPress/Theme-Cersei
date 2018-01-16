@@ -70,26 +70,34 @@
                                     О фильме
                                 </a>
                             </li>
+                            <% if (page.urls.movies.online) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.online %>">
                                     Онлайн
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.download) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.download %>">
                                     Скачать
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.trailer) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.trailer %>">
                                     Трейлер
                                 </a>
                             </li>
+                            <% } %>
+                            <% if (page.urls.movies.picture) { %>
                             <li>
                                 <a href="<%- movie.url %>/<%- page.urls.movies.picture %>">
                                     Кадры
                                 </a>
                             </li>
+                            <% } %>
                             <li style="float: right; width: 22%; display: none;" class="watchLaterBlock">
                                 <a href="javascript:void(0)" id="watchLater">
                                     Досмотреть позже
