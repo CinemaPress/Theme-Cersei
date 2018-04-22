@@ -20,7 +20,6 @@
                 <div class="box_item">
 
                     <% if (typeof slider === 'object' && slider.length) { %>
-
                     <div class="slider_box s_home">
                         <div class="head_slider">
                             <div class="controles">
@@ -30,9 +29,7 @@
                             </div>
                         </div>
                         <div class="owl-carousel owl-theme slider1">
-
                             <% slider.forEach(function (movie) { %>
-
                             <div class="item">
                                 <div class="imagens">
                                     <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%= movie.title %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
@@ -41,20 +38,17 @@
                                 <span class="ttps"><%= movie.title %> (<%- movie.year %>)</span>
                                 <span class="ytps"><%- movie.year %></span>
                             </div>
-
                             <% }); %>
-
                         </div>
                     </div>
-
                     <% } %>
 
-                    <div style="clear: both;"></div>
-
                     <% if (typeof page.adv === 'object' && page.adv.over) { %>
+                    <div style="clear: both;"></div>
                     <div style="text-align: center; margin: 10px auto">
                         <%- page.adv.over %>
                     </div>
+                    <div style="clear: both;"></div>
                     <% } %>
 
                     <div id="player2">
@@ -114,200 +108,213 @@
                     <div style="clear: both;"></div>
                     <% } %>
 
-                    <div id="single">
-                        <div class="post-ratings">
-                            <div class="s_left">
-                                <div id="uwee" class="sbox">
-                                    <div class="imagen">
-                                        <div class="fix">
-                                            <div class="cinemapress-poster">
-                                                <img src="<%- movie.poster %>" alt="<%= movie.title %> (<%- movie.year %>)" title="<%= movie.title %> (<%- movie.year %>)">
-                                                <% if (movie.quality) { %>
-                                                <div class="cinemapress-quality">
-                                                    <span class="cinemapress-svg-quality"></span>
-                                                    <%- movie.quality %>
-                                                </div>
-                                                <% } %>
-                                                <% if (movie.translate) { %>
-                                                <div class="cinemapress-translate">
-                                                    <span class="cinemapress-svg-translate"></span>
-                                                    <%- movie.translate %>
-                                                </div>
-                                                <% } %>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="data">
-                                        <h1><%= page.title %></h1>
-                                        <span class="titulo_o"><%= movie.title_en %>&nbsp;&nbsp;&nbsp;&nbsp;<%- movie.premiere %></span>
-                                        <p class="meta">
-                                            <% if (movie.year_url) { %>
-                                            <span>
-                                                <%- movie.year_url %>
-                                            </span>
-                                            <% } %>
-                                            &nbsp;
-                                            <% if (movie.genres_url) { %>
-                                            <i class="limpiar">
-                                                <%- movie.genres_url %>
-                                            </i>
-                                            <% } %>
-                                        </p>
-                                        <div class="imdb_r">
-                                            <div class="a">
-                                                <span><%- movie.imdb_rating/10 %></span>
-                                            </div>
-                                            <div class="b">
-                                                <div class="bar">
-                                                    <span style="width: <%- movie.imdb_rating %>%"></span>
-                                                </div>
-                                        <span class="dato">
-                                            IMDb: <b><%- movie.imdb_rating/10 %>/10</b> <b><%- movie.imdb_vote %> голосов</b>
-                                        </span>
-                                            </div>
-                                        </div>
-                                        <div class="kp_r">
-                                            <div class="a">
-                                                <span><%- movie.kp_rating/10 %></span>
-                                            </div>
-                                            <div class="b">
-                                                <div class="bar">
-                                                    <span style="width: <%- movie.kp_rating %>%"></span>
-                                                </div>
-                                        <span class="dato">
-                                            КиноПоиск: <b><%- movie.kp_rating/10 %>/10</b> <b><%- movie.kp_vote %> голосов</b>
-                                        </span>
-                                            </div>
-                                        </div>
-                                        <% if (movie.directors_url) { %>
-                                        <p class="meta_dd">
-                                            <b class="icon-megaphone"></b>
-                                            <%- movie.directors_url %>
-                                        </p>
-                                        <% } %>
-                                        <% if (movie.actors_url) { %>
-                                        <p class="meta_dd limpiar">
-                                            <b class="icon-male"></b>
-                                            <%- movie.actors_url %>
-                                        </p>
-                                        <% } %>
-                                        <% if (movie.countries_url) { %>
-                                        <p class="meta_dd">
-                                            <b class="icon-flag"></b>
-                                            <%- movie.countries_url %>
-                                        </p>
-                                        <% } %>
-                                    </div>
+                    <div class="peliculas">
 
-                                </div>
-
-                                <% if (typeof contents === 'object' && contents.length) { %>
-                                <div style="clear: both"></div>
-                                <div class="sbox">
-                                    <% contents.forEach(function (content) { %>
-                                    <div style="float: left; width: 50%;">
-                                        <div style="margin: 0; padding: 10px">
-                                            <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url(<%- content.image %>);">
-                                                <div class="cinemapress-news-title">
-                                                    <%= content.title %>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <% }); %>
-                                </div>
-                                <div style="clear: both"></div>
-                                <% } %>
-
-                                <% if (page.seo) { %>
-                                <div class="sbox">
-                                    <div class="entry-content">
-                                        <%- page.seo %>
-                                    </div>
-                                </div>
-                                <% } %>
-
-                                <div class="sbox episodesListBlock" style="display: none;">
-                                    <div class="entry-content">
-                                        <h3><%= movie.title %> новые серии</h3>
-                                        <div id="episodesList" data-id="<%- movie.kp_id %>"></div>
-                                    </div>
-                                </div>
-
-                                <% if (page.comments) { %>
-
-                                <div class="comentarios">
-                                    <div id="comments" class="themeform">
-                                        <%- page.comments %>
-                                    </div>
-                                </div>
-
-                                <% } %>
-
-                                <div class="sbox">
-                                    <div class="entry-content">
-                                        <% if (typeof movies === 'object') { for (var type in movies) { if (movies.hasOwnProperty(type)) { %>
-
-                                        <% if (movies[type].length) { %>
-
-                                        <% movies[type].forEach(function (category) { %>
-
-                                        <div class="slider_box" style="margin-bottom: 25px;">
-                                            <div class="head_slider">
-                                                <h3><%- category.name %></h3>
-                                                <div class="controles">
-                                                    <a class="prev2 btn">
-                                                        <b class="icon-angle-left"></b>
-                                                    </a>
-                                                    <a class="next2 btn">
-                                                        <b class="icon-angle-right"></b>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="owl-carousel owl-theme slider2">
-
-                                                <% if (category.movies.length) { %>
-
-                                                <% category.movies.forEach(function (movie) { %>
-
-                                                <div class="item">
-                                                    <div class="imagens">
-                                                        <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%- movies.title_ru %>" style="width: 100%; height: 100%;"/>
-                                                        </a>
-                                                        <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
+                        <div id="single">
+                            <div class="post-ratings">
+                                <div class="s_left">
+                                    <div id="uwee" class="sbox">
+                                        <div class="imagen">
+                                            <div class="fix">
+                                                <div class="cinemapress-poster">
+                                                    <img src="<%- movie.poster %>" alt="<%= movie.title %> (<%- movie.year %>)" title="<%= movie.title %> (<%- movie.year %>)">
+                                                    <% if (movie.quality) { %>
+                                                    <div class="cinemapress-quality">
+                                                        <span class="cinemapress-svg-quality"></span>
+                                                        <%- movie.quality %>
                                                     </div>
-                                                    <span class="ttps" title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %> смотреть</span>
-                                                    <span class="ytps"><%- movie.year %></span>
+                                                    <% } %>
+                                                    <% if (movie.translate) { %>
+                                                    <div class="cinemapress-translate">
+                                                        <span class="cinemapress-svg-translate"></span>
+                                                        <%- movie.translate %>
+                                                    </div>
+                                                    <% } %>
                                                 </div>
-
-                                                <% }); %>
-
-                                                <% } %>
-
                                             </div>
                                         </div>
+                                        <div class="data">
+                                            <h1><%= page.title %></h1>
+                                            <span class="titulo_o"><%= movie.title_en %>&nbsp;&nbsp;&nbsp;&nbsp;<%- movie.premiere %></span>
+                                            <p class="meta">
+                                                <% if (movie.year_url) { %>
+                                                <span>
+                                                    <%- movie.year_url %>
+                                                </span>
+                                                <% } %>
+                                                &nbsp;
+                                                <% if (movie.genres_url) { %>
+                                                <i class="limpiar">
+                                                    <%- movie.genres_url %>
+                                                </i>
+                                                <% } %>
+                                            </p>
+                                            <div class="imdb_r">
+                                                <div class="a">
+                                                    <span><%- movie.imdb_rating/10 %></span>
+                                                </div>
+                                                <div class="b">
+                                                    <div class="bar">
+                                                        <span style="width: <%- movie.imdb_rating %>%"></span>
+                                                    </div>
+                                                    <span class="dato">
+                                                        IMDb: <b><%- movie.imdb_rating/10 %>/10</b> <b><%- movie.imdb_vote %> голосов</b>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="kp_r">
+                                                <div class="a">
+                                                    <span><%- movie.kp_rating/10 %></span>
+                                                </div>
+                                                <div class="b">
+                                                    <div class="bar">
+                                                        <span style="width: <%- movie.kp_rating %>%"></span>
+                                                    </div>
+                                                    <span class="dato">
+                                                        КиноПоиск: <b><%- movie.kp_rating/10 %>/10</b> <b><%- movie.kp_vote %> голосов</b>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <% if (movie.directors_url) { %>
+                                            <p class="meta_dd">
+                                                <b class="icon-megaphone"></b>
+                                                <%- movie.directors_url %>
+                                            </p>
+                                            <% } %>
+                                            <% if (movie.actors_url) { %>
+                                            <p class="meta_dd limpiar">
+                                                <b class="icon-male"></b>
+                                                <%- movie.actors_url %>
+                                            </p>
+                                            <% } %>
+                                            <% if (movie.countries_url) { %>
+                                            <p class="meta_dd">
+                                                <b class="icon-flag"></b>
+                                                <%- movie.countries_url %>
+                                            </p>
+                                            <% } %>
+                                        </div>
 
-                                        <% }); %>
-
-                                        <% } %>
-
-                                        <% } } } %>
                                     </div>
+
+                                    <% if (movie.description) { %>
+                                    <div class="sbox">
+                                        <div class="entry-content">
+                                            <h3>Описание</h3>
+                                            <%- movie.description %>
+                                        </div>
+                                    </div>
+                                    <% } %>
+
+                                    <% if (typeof contents === 'object' && contents.length) { %>
+                                    <div style="clear: both"></div>
+                                    <div class="sbox">
+                                        <% contents.forEach(function (content) { %>
+                                        <div style="float: left; width: 50%;">
+                                            <div style="margin: 0; padding: 10px">
+                                                <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url(<%- content.image %>);">
+                                                    <div class="cinemapress-news-title">
+                                                        <%= content.title %>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <% }); %>
+                                    </div>
+                                    <div style="clear: both"></div>
+                                    <% } %>
+
+                                    <% if (page.seo) { %>
+                                    <div class="sbox">
+                                        <div class="entry-content">
+                                            <%- page.seo %>
+                                        </div>
+                                    </div>
+                                    <% } %>
+
+                                    <div class="sbox episodesListBlock" style="display: none;">
+                                        <div class="entry-content">
+                                            <h3><%= movie.title %> новые серии</h3>
+                                            <div id="episodesList" data-id="<%- movie.kp_id %>"></div>
+                                        </div>
+                                    </div>
+
+                                    <% if (page.comments) { %>
+
+                                    <div class="comentarios">
+                                        <div id="comments" class="themeform">
+                                            <%- page.comments %>
+                                        </div>
+                                    </div>
+
+                                    <% } %>
+
+                                    <% if (typeof movies === 'object') { for (var type in movies) { if (movies.hasOwnProperty(type)) { %>
+
+                                    <% if (movies[type].length) { %>
+
+                                    <div class="sbox">
+                                        <div class="entry-content">
+
+                                            <% movies[type].forEach(function (category) { %>
+
+                                            <div class="slider_box" style="margin-bottom: 25px;">
+                                                <div class="head_slider">
+                                                    <h3><%- category.name %></h3>
+                                                    <div class="controles">
+                                                        <a class="prev2 btn">
+                                                            <b class="icon-angle-left"></b>
+                                                        </a>
+                                                        <a class="next2 btn">
+                                                            <b class="icon-angle-right"></b>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="owl-carousel owl-theme slider2">
+
+                                                    <% if (category.movies.length) { %>
+
+                                                    <% category.movies.forEach(function (movie) { %>
+
+                                                    <div class="item">
+                                                        <div class="imagens">
+                                                            <a href="<%- movie.url %>">
+                                                                <img src="<%- movie.poster %>" alt="<%- movies.title_ru %>" style="width: 100%; height: 100%;"/>
+                                                            </a>
+                                                            <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
+                                                        </div>
+                                                        <span class="ttps" title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %></span>
+                                                        <span class="ytps"><%- movie.year %></span>
+                                                    </div>
+
+                                                    <% }); %>
+
+                                                    <% } %>
+
+                                                </div>
+                                            </div>
+
+                                            <% }); %>
+
+                                        </div>
+                                    </div>
+
+                                    <% } %>
+
+                                    <% } } } %>
+
                                 </div>
-
-                            </div>
-                            <div class="s_right">
-
-                                <% include includes/right.ejs %>
-
                             </div>
                         </div>
+
                     </div>
 
-                    <% include includes/footer.ejs %>
+                    <% include includes/right.ejs %>
 
                 </div>
             </div>
+
+            <% include includes/footer.ejs %>
 
         </div>
     </div>
