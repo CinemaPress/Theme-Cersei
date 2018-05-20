@@ -15,7 +15,7 @@
 
     <span class="texto">
         &copy;&nbsp;<%- new Date().getFullYear() %>&nbsp;<a href="https://cinemapress.org" target="_blank">CinemaPress&nbsp;ACMS</a>
-        Email для связи: <%- page.email %>
+        Email для связи: <span id="mylo">Activate JS</span><script>(function(d,i,l,r){d.getElementById(i).innerHTML=l+'@'+r;})(window.document,'mylo','<%- page.email.split('@')[0] %>','<%- page.email.split('@')[1] %>');</script>
     </span>
 
     <script src="/themes/cersei/public/js/all.js"></script>
