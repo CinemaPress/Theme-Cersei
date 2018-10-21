@@ -1,42 +1,42 @@
 <div class="rheader">
     <div class="box">
         <div class="left">
-            <a href="#bars" class="rclic"><b class="icon-bars"></b></a>
+            <a href="javascript:void(0)" class="rclic"><strong class="icon-bars"></strong></a>
         </div>
         <div class="rmenus">
             <div>
                 <ul>
                     <li class="page_item">
-                        <a href="/<%- page.urls.year %>">Все годы</a>
+                        <a href="/<%- page.urls.year %>"><%- page.l.allYears %></a>
                     </li>
                     <li class="page_item">
-                        <a href="/<%- page.urls.genre %>">Все жанры</a>
+                        <a href="/<%- page.urls.genre %>"><%- page.l.allGenres %></a>
                     </li>
                     <li class="page_item">
-                        <a href="/<%- page.urls.country %>">Все страны</a>
+                        <a href="/<%- page.urls.country %>"><%- page.l.allCountries %></a>
                     </li>
                     <li class="page_item">
-                        <a href="/<%- page.urls.actor %>">Все актеры</a>
+                        <a href="/<%- page.urls.actor %>"><%- page.l.allActors %></a>
                     </li>
                     <li class="page_item">
-                        <a href="/<%- page.urls.director %>">Все режиссеры</a>
+                        <a href="/<%- page.urls.director %>"><%- page.l.allDirectors %></a>
                     </li>
                 </ul>
             </div>
         </div>
         <div class="right">
-            <a class="rclic2"><b class="icon-search"></b></a>
+            <a class="rclic2"><strong class="icon-search"></strong></a>
         </div>
         <div class="rbuscar">
             <form method="get" action="/<%- page.urls.search %>/title">
                 <div class="textar">
-                    <input class="buscar" type="text" placeholder="Поиск ..." name="q" value="">
+                    <input class="buscar" type="text" placeholder="<%- page.l.search %> ..." name="q" value="">
                 </div>
             </form>
         </div>
         <div class="center">
             <a href="/">
-                <img src="/themes/cersei/public/images/logo.png" alt="Логотип"/>
+                <img src="/themes/cersei/public/images/logo.png?v=<%- page.ver %>" alt="Logo"/>
             </a>
         </div>
     </div>
@@ -46,29 +46,28 @@
         <div class="menu">
             <ul id="menu-header-menu">
                 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home">
-                    <a href="/">Все фильмы в мире</a>
+                    <a href="/"><%- page.title %></a>
                 </li>
             </ul>
             <% if (page.social) { %>
             <div class="social">
-                <b>Следите за Нами:</b>
                 <% if (page.social.vk) { %>
-                <a href="<%- page.social.vk %>" target="_blank">ВК</a>
+                <a href="<%- page.social.vk %>" target="_blank"><%- page.l.vk %></a>
                 <% } %>
                 <% if (page.social.facebook) { %>
-                <a href="<%- page.social.facebook %>" target="_blank">Facebook</a>
+                <a href="<%- page.social.facebook %>" target="_blank"><%- page.l.facebook %></a>
                 <% } %>
                 <% if (page.social.twitter) { %>
-                <a href="<%- page.social.twitter %>" target="_blank">Twitter</a>
+                <a href="<%- page.social.twitter %>" target="_blank"><%- page.l.twitter %></a>
                 <% } %>
                 <% if (page.social.gplus) { %>
-                <a href="<%- page.social.gplus %>" target="_blank">Google+</a>
+                <a href="<%- page.social.gplus %>" target="_blank"><%- page.l.google %></a>
                 <% } %>
                 <% if (page.social.youtube) { %>
-                <a href="<%- page.social.youtube %>" target="_blank">YouTube</a>
+                <a href="<%- page.social.youtube %>" target="_blank"><%- page.l.youtube %></a>
                 <% } %>
                 <% if (page.social.instagram) { %>
-                <a href="<%- page.social.instagram %>" target="_blank">Instagram</a>
+                <a href="<%- page.social.instagram %>" target="_blank"><%- page.l.instagram %></a>
                 <% } %>
             </div>
             <% } %>
@@ -78,14 +77,14 @@
         <div class="caja">
             <div class="logo">
                 <A href="/">
-                    <img src="/themes/cersei/public/images/logo.png" alt="Логотип"/>
+                    <img src="/themes/cersei/public/images/logo.png?v=<%- page.ver %>" alt="Logo"/>
                 </a>
             </div>
             <div style="margin: auto auto auto 5px; display: none;" class="menu continueViewingBlock">
                 <div>
                     <ul>
                         <li class="page_item" id="continueViewing">
-                            <a href="javascript:void(0)">На чем остановились?</a>
+                            <a href="javascript:void(0)"><%- page.l.continue %>?</a>
                         </li>
                     </ul>
                 </div>
@@ -94,19 +93,19 @@
                 <div>
                     <ul>
                         <li class="page_item">
-                            <a href="/<%- page.urls.year %>">Все годы</a>
+                            <a href="/<%- page.urls.year %>"><%- page.l.allYears %></a>
                         </li>
                         <li class="page_item">
-                            <a href="/<%- page.urls.genre %>">Все жанры</a>
+                            <a href="/<%- page.urls.genre %>"><%- page.l.allGenres %></a>
                         </li>
                         <li class="page_item">
-                            <a href="/<%- page.urls.country %>">Все страны</a>
+                            <a href="/<%- page.urls.country %>"><%- page.l.allCountries %></a>
                         </li>
                         <li class="page_item">
-                            <a href="/<%- page.urls.actor %>">Все актеры</a>
+                            <a href="/<%- page.urls.actor %>"><%- page.l.allActors %></a>
                         </li>
                         <li class="page_item">
-                            <a href="/<%- page.urls.director %>">Все режиссеры</a>
+                            <a href="/<%- page.urls.director %>"><%- page.l.allDirectors %></a>
                         </li>
                     </ul>
                 </div>

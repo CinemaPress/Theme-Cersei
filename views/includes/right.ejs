@@ -3,7 +3,7 @@
 
         <script src="/themes/default/public/desktop/js/yastatic.net/es5-shims.min.js"></script>
         <script src="/themes/default/public/desktop/js/yastatic.net/share2.js"></script>
-        <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,moimir,gplus" style="margin: 15px auto; text-align: center;"></div>
+        <div class="ya-share2" data-services="vkontakte,facebook,twitter,gplus" style="margin: 15px auto; text-align: center;"></div>
 
         <div class="categorias">
             <ul class="scrolling cat">
@@ -29,29 +29,24 @@
         </div>
 
         <% if (typeof soon === 'object' && soon.length) { %>
-
         <div class="categorias">
-            <h3>Скоро выйдет <span class="icon-sort"></span></h3>
-            <ul class="scrolling cat">
-
-                <% soon.forEach(function (movie) { %>
-
-                <li class="cat-item">
-                    <a href="<%- movie.url %>" title="<%= movie.title %>">
+            <h3 style="margin: auto;"><%- page.l.soon %></h3>
+            <% soon.forEach(function (movie) { %>
+            <div style="margin: 0; padding: 10px 0">
+                <a href="<%- movie.url %>" class="cinemapress-news" style="background-image:url(<%- movie.poster %>);">
+                    <div class="cinemapress-news-title">
                         <%= movie.title %>
-                    </a>
-                </li>
-
-                <% }); %>
-
-            </ul>
+                    </div>
+                </a>
+            </div>
+            <% }); %>
         </div>
-
         <% } %>
 
         <% if (typeof news === 'object' && news.length) { %>
-        <% news.forEach(function (content) { %>
-        <div>
+        <div class="categorias">
+            <h3 style="margin: auto;"><%- page.l.news %></h3>
+            <% news.forEach(function (content) { %>
             <div style="margin: 0; padding: 10px 0">
                 <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url(<%- content.image %>);">
                     <div class="cinemapress-news-title">
@@ -59,8 +54,8 @@
                     </div>
                 </a>
             </div>
+            <% }); %>
         </div>
-        <% }); %>
         <% } %>
 
         <% if (typeof page.adv === 'object' && page.adv.right) { %>
@@ -88,7 +83,7 @@
                         <span>
                             <%- comment.user %>
                         </span><span>
-                            сказал(а)
+                            <%- page.l.said %>
                         </span><span>
                             <%- comment.date %>
                         </span>

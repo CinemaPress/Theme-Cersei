@@ -24,9 +24,9 @@
                     <div class="slider_box s_home">
                         <div class="head_slider">
                             <div class="controles">
-                                <a class="prev btn"><b class="icon-angle-left"></b></a>
-                                <a class="play btn"><b class="icon-playback-play"></b></a>
-                                <a class="next btn"><b class="icon-angle-right"></b></a>
+                                <a class="prev btn"><strong class="icon-angle-left"></strong></a>
+                                <a class="play btn"><strong class="icon-playback-play"></strong></a>
+                                <a class="next btn"><strong class="icon-angle-right"></strong></a>
                             </div>
                         </div>
                         <div class="owl-carousel owl-theme slider1">
@@ -35,8 +35,8 @@
 
                             <div class="item">
                                 <div class="imagens">
-                                    <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%= movie.title %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
-                                    <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
+                                    <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%= movie.title %>" title="<%= movie.title %>" style="width: 100%; height: 100%;"></a>
+                                    <span class="imdb"><strong class="icon-star"></strong> <%- movie.rating/10 %></span>
                                 </div>
                                 <span class="ttps" title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %> (<%- movie.year %>)</span>
                                 <span class="ytps"><%- movie.year %></span>
@@ -56,12 +56,12 @@
                         <div class="slider_box s_home">
                             <div class="head_slider">
                                 <h3>
-                                    Топ
+                                    <%- page.l.top %>
                                 </h3>
                                 <div class="controles">
-                                    <a class="prev btn"><b class="icon-angle-left"></b></a>
-                                    <a class="play btn"><b class="icon-playback-play"></b></a>
-                                    <a class="next btn"><b class="icon-angle-right"></b></a>
+                                    <a class="prev btn"><strong class="icon-angle-left"></strong></a>
+                                    <a class="play btn"><strong class="icon-playback-play"></strong></a>
+                                    <a class="next btn"><strong class="icon-angle-right"></strong></a>
                                 </div>
                             </div>
                             <div class="owl-carousel owl-theme slider1">
@@ -70,10 +70,10 @@
 
                                 <div class="item">
                                     <div class="imagens">
-                                        <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%= movie.title %> (<%- movie.year %>) полный фильм онлайн" style="width: 100%; height: 100%;"/></a>
-                                        <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
+                                        <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%= movie.title %>" title="<%= movie.title %>" style="width: 100%; height: 100%;"></a>
+                                        <span class="imdb"><strong class="icon-star"></strong> <%- movie.rating/10 %></span>
                                     </div>
-                                    <span class="ttps" title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %> (<%- movie.year %>) полный фильм онлайн</span>
+                                    <span class="ttps" title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %> (<%- movie.year %>) <%- page.l.online %></span>
                                     <span class="ytps"><%- movie.year %></span>
                                 </div>
 
@@ -86,7 +86,7 @@
 
                         <div style="clear: both;"></div>
 
-                        <h1><%= page.title %></h1>
+                        <h1><%- page.h1 %></h1>
 
                         <% if (typeof content === 'object') { %>
                         <div class="cinemapress-content">
@@ -153,13 +153,13 @@
                             <div class="item">
                                 <a href="<%- movie.url %>">
                                     <div class="image">
-                                        <img src="<%- movie.poster %>" alt="<%= movie.title %> (<%- movie.year %>) полный фильм" style="width: 100%; height: 100%;"/>
+                                        <img src="<%- movie.poster %>" alt="<%= movie.title %>" title="<%= movie.title %>" style="width: 100%; height: 100%;">
                                         <span class="player"></span>
-                                        <span class="imdb"><b><b class="icon-star"></b></b> <%- movie.rating/10 %></span>
+                                        <span class="imdb"><strong class="icon-star"></strong> <%- movie.rating/10 %></span>
                                     </div>
                                 </a>
                                 <div class="fixyear">
-                                    <h3 title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %> смотреть онлайн</h3>
+                                    <h3 title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %> <%- page.l.online %></h3>
                                     <span class="year"><%- movie.year %></span>
                                 </div>
                                 <% if (movie.quality) { %>
