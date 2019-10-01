@@ -262,7 +262,16 @@
 
                                             <div class="slider_box" style="margin-bottom: 25px;">
                                                 <div class="head_slider">
-                                                    <h3><%- category.name %></h3>
+                                                    <h3>
+                                                        <%- category.name %>
+                                                        <div class="randomMovieRelated">
+                                                            <div class="cinemapress-random-related"
+                                                                 onclick="window.location.href='<%- category.url %>?random'"
+                                                                 title="<%- page.l.random %>">
+                                                                <img src="/themes/cersei/public/images/dice.svg" alt="<%- page.l.random %>">
+                                                            </div>
+                                                        </div>
+                                                    </h3>
                                                     <div class="controles">
                                                         <a class="prev2 btn">
                                                             <strong class="icon-angle-left"></strong>

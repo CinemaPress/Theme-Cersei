@@ -1,10 +1,10 @@
 # Theme «cersei»
 
-![Theme «cersei» for CinemaPress ACMS](https://raw.githubusercontent.com/CinemaPress/Theme-Cersei/master/screenshot.png "Theme «cersei» for CinemaPress ACMS")
+![Theme «cersei» for CinemaPress](https://raw.githubusercontent.com/CinemaPress/Theme-Cersei/master/screenshot.png "Theme «cersei» for CinemaPress")
 
-:art: Theme «cersei» for CinemaPress ACMS
+:art: Theme «cersei» for CinemaPress
 
-- [Cersei.CinemaPress.org](http://Cersei.CinemaPress.org/)
+- [Cersei.CinemaPress.io](http://Cersei.CinemaPress.io/)
 
 ## How to install?
 1. Download [GitHub](https://github.com/CinemaPress/Theme-Cersei/archive/master.zip) or [GitLab](https://gitlab.com/CinemaPress/Theme-Cersei/repository/archive.zip) or [BitBucket](https://bitbucket.org/cinemapress/theme-cersei/get/master.zip) or [Coding](https://coding.net/u/CinemaPress/p/Theme-Cersei/git/archive/master.zip)
@@ -14,7 +14,7 @@
 
 ## Installation via terminal
 ```
-~# wget cinemapress.org/i -qO i && chmod +x i && ./i 3
+~# bash <(wget -qO- cinemapress.sh)
 ```
 
 ## Как установить?
@@ -25,5 +25,5 @@
 
 ## Установка через терминал
 ```
-~# wget cinemapress.org/i -qO i && chmod +x i && ./i 3
+~# bash <(wget -qO- cinemapress.sh)
 ```

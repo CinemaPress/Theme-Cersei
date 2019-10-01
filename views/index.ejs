@@ -66,7 +66,16 @@
 
                         <% if (category.movies.length) { %>
 
-                        <h2><%- category.name %></h2>
+                        <h2>
+                            <%- category.name %>
+                            <div class="randomMovieIndex">
+                                <div class="cinemapress-random-index"
+                                     onclick="window.location.href='<%- category.url %>?random'"
+                                     title="<%- page.l.random %>">
+                                    <img src="/themes/cersei/public/images/dice.svg" alt="<%- page.l.random %>">
+                                </div>
+                            </div>
+                        </h2>
 
                         <% category.movies.forEach(function (movie) { %>
 

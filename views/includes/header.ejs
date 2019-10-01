@@ -28,10 +28,11 @@
             <a class="rclic2"><strong class="icon-search"></strong></a>
         </div>
         <div class="rbuscar">
-            <form method="get" action="/<%- page.urls.search %>/title">
+            <form method="get" action="/<%- page.urls.search %>">
                 <div class="textar">
-                    <input class="buscar" type="text" placeholder="<%- page.l.search %> ..." name="q" value="">
+                    <input class="buscar" type="text" placeholder="<%- page.l.search %> ..." name="q" value="" data-autocomplete="mobile">
                 </div>
+                <div class="cinemapress-autocomplete" data-autocomplete="mobile"></div>
             </form>
         </div>
         <div class="center">
@@ -57,11 +58,11 @@
                 <% if (page.social.facebook) { %>
                 <a href="<%- page.social.facebook %>" target="_blank"><%- page.l.facebook %></a>
                 <% } %>
+                <% if (page.social.telegram) { %>
+                    <a href="<%- page.social.telegram %>" target="_blank"><%- page.l.telegram %></a>
+                <% } %>
                 <% if (page.social.twitter) { %>
                 <a href="<%- page.social.twitter %>" target="_blank"><%- page.l.twitter %></a>
-                <% } %>
-                <% if (page.social.gplus) { %>
-                <a href="<%- page.social.gplus %>" target="_blank"><%- page.l.google %></a>
                 <% } %>
                 <% if (page.social.youtube) { %>
                 <a href="<%- page.social.youtube %>" target="_blank"><%- page.l.youtube %></a>
@@ -87,6 +88,17 @@
                             <a href="javascript:void(0)"><%- page.l.continue %>?</a>
                         </li>
                     </ul>
+                </div>
+            </div>
+            <div class="randomMovieMenu">
+                <div style="margin: auto auto auto 5px;" class="menu cinemapress-random-menu">
+                    <div>
+                        <ul>
+                            <li class="page_item">
+                                <a href="/?random"><%- page.l.lucky %></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="menu">

@@ -118,6 +118,17 @@
 
                         <div style="clear: both;"></div>
 
+                        <div class="randomMovieCategory">
+                            <div class="cinemapress-random-category"
+                                 onclick="window.location.href='<%- page.url %>?random'">
+                                <img src="/themes/cersei/public/images/dice.svg" alt="<%- page.l.random %>">
+                                <span><%- page.l.lucky %></span>
+                                <small><%- page.l.random %></small>
+                            </div>
+                        </div>
+
+                        <div style="clear: both;"></div>
+
                         <% if (typeof page.sorting === 'object') { %>
 
                         <div class="pagination">
