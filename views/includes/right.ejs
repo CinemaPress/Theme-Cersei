@@ -33,7 +33,7 @@
             <h3 style="margin: auto;"><%- page.l.soon %></h3>
             <% soon.forEach(function (movie) { %>
             <div style="margin: 0; padding: 10px 0">
-                <a href="<%- movie.url %>" class="cinemapress-news" style="background-image:url(<%- movie.poster %>);">
+                <a href="<%- movie.url %>" class="cinemapress-news" style="background-image:url('<%- movie.poster %>');">
                     <div class="cinemapress-news-title">
                         <%= movie.title %>
                     </div>
@@ -48,7 +48,7 @@
             <h3 style="margin: auto;"><%- page.l.news %></h3>
             <% news.forEach(function (content) { %>
             <div style="margin: 0; padding: 10px 0">
-                <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url(<%- content.image %>);">
+                <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url('<%- content.image %>');">
                     <div class="cinemapress-news-title">
                         <%= content.title %>
                     </div>
