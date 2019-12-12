@@ -38,7 +38,7 @@
                                     <a href="<%- movie.url %>"><img src="<%- movie.poster %>" alt="<%= movie.title %>" title="<%= movie.title %>" style="width: 100%; height: 100%;"></a>
                                     <span class="imdb"><strong class="icon-star"></strong> <%- movie.rating/10 %></span>
                                 </div>
-                                <span class="ttps" title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %> (<%- movie.year %>)</span>
+                                <span class="ttps" title="<%= movie.title %> (<%- movie.year %>)"><%= movie.title %></span>
                                 <span class="ytps"><%- movie.year %></span>
                             </div>
 
@@ -91,7 +91,7 @@
                                 <div class="fixyear">
                                     <h3><%= movie.title %> (<% if (movie.season && movie.episode) { %><%- movie.season %> <%- page.l.season %> <%- movie.episode %> <%- page.l.episode %> <% if (movie.translate) { %><%- movie.translate %><% } %><% } else { %><%- movie.year %><% } %>)</h3>
                                     <span class="year">
-                                        <% if (movie.season && movie.episode) { %><%- movie.season %> <%- page.l.season %> <%- movie.episode %> <%- page.l.episode %> <% if (movie.translate) { %> <%- movie.translate %><% } %><% } else { %><%- movie.year %><% } %>
+                                        <% if (movie.season && movie.episode) { %><%- movie.season %> <%- page.l.season %> <%- movie.episode %> <%- page.l.episode %> <% if (movie.translate) { %> <%- movie.translate %><% } %><% } else { %><%- movie.genre %><% } %>
                                     </span>
                                 </div>
                                 <% if (movie.quality) { %>
