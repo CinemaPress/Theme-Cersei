@@ -3,7 +3,8 @@
 
         <script src="/themes/default/public/desktop/js/yastatic.net/es5-shims.min.js"></script>
         <script src="/themes/default/public/desktop/js/yastatic.net/share2.js"></script>
-        <div class="ya-share2" data-services="vkontakte,facebook,twitter" style="margin: 15px auto; text-align: center;"></div>
+        <div class="ya-share2" data-services="vkontakte,facebook,twitter"
+             style="margin: 15px auto; text-align: center;"></div>
 
         <div class="categorias">
             <ul class="scrolling cat">
@@ -18,7 +19,7 @@
         </div>
         <div class="filtro_y">
             <ul class="scrolling">
-                <% page.urls.years.slice(0,10).forEach(function(year) { %>
+                <% page.urls.years.slice(0, 10).forEach(function(year) { %>
                     <li>
                         <a class="ito" href="<%- year.url %>">
                             <%- year.title %>
@@ -33,7 +34,8 @@
                 <h3 style="margin: auto;"><%- page.l.soon %></h3>
                 <% soon.forEach(function (movie) { %>
                     <div style="margin: 0; padding: 10px 0">
-                        <a href="<%- movie.url %>" class="cinemapress-news" style="background-image:url('<%- movie.poster %>');">
+                        <a href="<%- movie.url %>" class="cinemapress-news"
+                           style="background-image:url('<%- movie.poster %>');">
                             <div class="cinemapress-news-title">
                                 <%= movie.title %>
                             </div>
@@ -48,7 +50,8 @@
                 <h3 style="margin: auto;"><%- page.l.news %></h3>
                 <% news.forEach(function (content) { %>
                     <div style="margin: 0; padding: 10px 0">
-                        <a href="<%- content.url %>" class="cinemapress-news" style="background-image:url('<%- content.image %>');">
+                        <a href="<%- content.url %>" class="cinemapress-news"
+                           style="background-image:url('<%- content.image %>');">
                             <div class="cinemapress-news-title">
                                 <%= content.title %>
                             </div>
@@ -80,12 +83,16 @@
                                 <div class="cinemapress-comment-user" data-comment-id="<%- comment.id %>">
                                     <div class="cinemapress-comment-user-name">
                                         <%- comment.user %>
-                                    </div><div class="cinemapress-comment-user-said">
+                                    </div>
+                                    <div class="cinemapress-comment-user-said">
                                         <%- page.l.said %>
-                                    </div><div class="cinemapress-comment-user-date">
+                                    </div>
+                                    <div class="cinemapress-comment-user-date">
                                         <%- comment.date %>
-                                    </div><div class="cinemapress-comment-user-link">
-                                        <a href="<%- comment.url %>#c<%- comment.id %>" title="<%= comment.title %>">#</a>
+                                    </div>
+                                    <div class="cinemapress-comment-user-link">
+                                        <a href="<%- comment.url %>#c<%- comment.id %>"
+                                           title="<%= comment.title %>">#</a>
                                     </div>
                                 </div>
                             </div>
