@@ -101,16 +101,8 @@
                                             </div>
                                         </a>
                                         <div class="fixyear">
-                                            <h3><%= movie.title %> (
-                                                <% if (movie.season && movie.episode) { %><% if (movie.translate) { %><%- movie.translate %><% } %>
-                                                <% } else { %><%- movie.year %>
-                                                <% } %>
-                                                )</h3>
-                                            <span class="year">
-                                                <% if (movie.season && movie.episode) { %><%- movie.season %> <%- page.l.season %> <%- movie.episode %> <%- page.l.episode %>
-                                                <% } else { %><%- movie.genre %>
-                                                <% } %>
-                                            </span>
+                                            <h3><%= movie.title %> (<% if (movie.season && movie.episode) { %><% if (movie.translate) { %><%- movie.translate %><% } %><% } else { %><%- movie.year %><% } %>)</h3>
+                                            <span class="year"><% if (movie.season && movie.episode) { %><%- movie.season %> <%- page.l.season %> <%- movie.episode %> <%- page.l.episode %><% } else { %><%- movie.genre %><% } %></span>
                                         </div>
                                         <% if (movie.quality) { %>
                                             <span class="calidad2"><%- movie.quality %></span>
