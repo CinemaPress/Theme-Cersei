@@ -69,7 +69,7 @@
                         if (index.hasOwnProperty(type) && index[type].length) {
                         index[type].forEach(function (category) { %>
 
-                            <% if (category.movies.length) { %>
+                            <% if (typeof category === 'object' && category.movies && category.movies.length) { %>
 
                                 <h2>
                                     <%- category.name %>
