@@ -1,10 +1,10 @@
 # Theme «cersei»
 
-![Theme «cersei» for CinemaPress](https://raw.githubusercontent.com/CinemaPress/Theme-Cersei/master/screenshot.png "Theme «cersei» for CinemaPress")
+![Theme «cersei» for CinemaPress](https://raw.githubusercontent.com/CinemaPress/Theme-Cersei/master/screenshot.png)
 
 :art: Theme «cersei» for CinemaPress
 
-- [Cersei.CinemaPress.io](http://Cersei.CinemaPress.io/)
+- `«cersei»`
 
 ## How to install?
 1. Download [GitHub](https://github.com/CinemaPress/Theme-Cersei/archive/master.zip) or [GitLab](https://gitlab.com/CinemaPress/Theme-Cersei/repository/archive.zip) or [BitBucket](https://bitbucket.org/cinemapress/theme-cersei/get/master.zip)
